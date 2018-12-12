@@ -3,9 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2C66C8E2-953F-45CF-B332-01F3BCD5B22D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.ApiCsv.Web", "src\Sample.ApiCsv.Web\Sample.ApiCsv.Web.csproj", "{B7C4AECE-7AD4-4280-9060-F2A41C308CDB}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7C4AECE-7AD4-4280-9060-F2A41C308CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C4AECE-7AD4-4280-9060-F2A41C308CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C4AECE-7AD4-4280-9060-F2A41C308CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C4AECE-7AD4-4280-9060-F2A41C308CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7C4AECE-7AD4-4280-9060-F2A41C308CDB} = {2C66C8E2-953F-45CF-B332-01F3BCD5B22D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FD16EB74-928D-475F-A3E6-C741CA3C33FC}
