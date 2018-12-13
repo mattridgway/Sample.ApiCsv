@@ -9,7 +9,7 @@
     <button onclick="GoGetData()">Get Data</button>
     <script type="text/javascript">
         function GoGetData() {
-            fetch('https://localhost:44315/api/sites')
+            fetch('https://localhost:5001/api/sites')
                 .then(function (response) {
                     return response.json();
                 })
