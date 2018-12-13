@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>hello world</p>
+    <button onclick="GoGetData()">Get Data</button>
+    <script type="text/javascript">
+        function GoGetData() {
+            fetch('https://localhost:44315/api/sites')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (myJson) {                    
+                    OutputDataAsCSV(myJson);
+                });
+        }
+
+        function OutputDataAsCSV(apidata) {
+            var csvdata = "";
+            for (var i = 0; i < apidata.length; i++) {
+                csvdata += apidata[i].id + ", " + apidata[i].siteName + ", " + apidata[i].addressPostcode + "\r\n";
+            }
+
+            var blob = new Blob(["\ufeff", csvdata]);
+            var downloadLink = document.createElement("a");
+            downloadLink.href = URL.createObjectURL(blob);
+            downloadLink.download = "data.csv";
+            downloadLink.click();
+        }
+    </script>
+</body>
+</html>
